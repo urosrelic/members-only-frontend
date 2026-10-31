@@ -1,6 +1,5 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig, lazyPlugins } from 'vite-plus';
-import tanstackRouter from '@tanstack/router-plugin/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -40,11 +39,5 @@ export default defineConfig({
       },
     ],
   },
-  plugins: lazyPlugins(() => [
-    tanstackRouter({
-      target: 'react',
-      autoCodeSplitting: true,
-    }),
-    react(),
-  ]),
+  plugins: lazyPlugins(() => [react()]),
 });
