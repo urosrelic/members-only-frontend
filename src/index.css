@@ -1,109 +1,129 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  width: 100%;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+:root {
+  color-scheme: dark;
+
+  --screen-background: #121212;
+  --field: #1c1c1e;
+  --raised: #252526;
+  --dropdown-menu: #252526;
+  --border: #2e2e31;
+  --text: #ececec;
+  --text-body: #d4d4d8;
+  --text-secondary: #999aa2;
+  --placeholder: #8a8a92;
+  --accent: #7c9cff;
+  --accent-hover: #a9beff;
+  --on-accent: #0b0b10;
+  --danger: #ff6b6b;
+  --muted: #9a9a9a;
+
+  /* Desktop */
+  --surface: #1c1c1e;
+
+  /* Font sizes */
+  --display: 32px;
+  --display-weight: 700;
+  --display-letter-spacing: -0.02em;
+
+  --logo: 20px;
+  --logo-weight: 700;
+  --logo-desktop: 22px;
+
+  --screen-title: 17px;
+  --screen-title-weight: 600;
+
+  --message-title: 16px;
+  --message-title-weight: 600;
+
+  --body: 16px;
+  --body-weight: 400;
+  --body-line-height: 1.5;
+
+  --username: 15px;
+  --username-weight: 600;
+
+  --label: 14px;
+  --label-weight: 500;
+
+  --meta: 14px;
+  --meta-weight: 400;
+  --meta-color: var(--muted);
+
+  --caption: 13px;
+  --caption-weight: 400;
+  --caption-color: var(--muted);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --screen-background: #f5f5f7;
+  --field: #ffffff;
+  --raised: #ededef;
+  --dropdown-menu: #ffffff;
+  --border: #e4e4e7;
+  --text: #111112;
+  --text-body: #3f3f46;
+  --text-secondary: #6b6b73;
+  --placeholder: #6f6f78;
+  --accent: #395fe0;
+  --accent-hover: #2a49b8;
+  --on-accent: #ffffff;
+  --danger: #d93637;
+  --muted: #6b6b73;
+
+  /* Desktop */
+  --surface: #ffffff;
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+  font-size: var(--display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-letter-spacing);
 }
+
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
+  font-size: var(--screen-title);
+  font-weight: var(--screen-title-weight);
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+h3 {
+  font-size: var(--message-title);
+  font-weight: var(--message-title-weight);
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+body {
+  font-size: var(--body);
+  line-height: var(--body-line-height);
+  color: var(--text-body);
+}
+
+label {
+  font-size: var(--label);
+  font-weight: var(--label-weight);
+}
+
+small {
+  font-size: var(--caption);
+  font-weight: var(--caption-weight);
+  color: var(--caption-color);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
