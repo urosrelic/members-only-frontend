@@ -4,6 +4,11 @@
   padding: 0;
   margin: 0;
   font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
 }
 
 :root {
@@ -22,9 +27,43 @@
   --accent-hover: #a9beff;
   --on-accent: #0b0b10;
   --danger: #ff6b6b;
+  --muted: #9a9a9a;
 
   /* Desktop */
   --surface: #1c1c1e;
+
+  /* Font sizes */
+  --display: 32px;
+  --display-weight: 700;
+  --display-letter-spacing: -0.02em;
+
+  --logo: 20px;
+  --logo-weight: 700;
+  --logo-desktop: 22px;
+
+  --screen-title: 17px;
+  --screen-title-weight: 600;
+
+  --message-title: 16px;
+  --message-title-weight: 600;
+
+  --body: 16px;
+  --body-weight: 400;
+  --body-line-height: 1.5;
+
+  --username: 15px;
+  --username-weight: 600;
+
+  --label: 14px;
+  --label-weight: 500;
+
+  --meta: 14px;
+  --meta-weight: 400;
+  --meta-color: var(--muted);
+
+  --caption: 13px;
+  --caption-weight: 400;
+  --caption-color: var(--muted);
 }
 
 :root[data-theme='light'] {
@@ -43,7 +82,48 @@
   --accent-hover: #2a49b8;
   --on-accent: #ffffff;
   --danger: #d93637;
+  --muted: #6b6b73;
 
   /* Desktop */
   --surface: #ffffff;
+}
+
+h1 {
+  font-size: var(--display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-letter-spacing);
+}
+
+h2 {
+  font-size: var(--screen-title);
+  font-weight: var(--screen-title-weight);
+}
+
+h3 {
+  font-size: var(--message-title);
+  font-weight: var(--message-title-weight);
+}
+
+body {
+  font-size: var(--body);
+  line-height: var(--body-line-height);
+  color: var(--text-body);
+}
+
+label {
+  font-size: var(--label);
+  font-weight: var(--label-weight);
+}
+
+small {
+  font-size: var(--caption);
+  font-weight: var(--caption-weight);
+  color: var(--caption-color);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
