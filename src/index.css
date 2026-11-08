@@ -36,6 +36,7 @@ body {
   --display: 32px;
   --display-weight: 700;
   --display-letter-spacing: -0.02em;
+  --display-line-height: 1.25;
 
   --logo: 20px;
   --logo-weight: 700;
@@ -92,6 +93,7 @@ h1 {
   font-size: var(--display);
   font-weight: var(--display-weight);
   letter-spacing: var(--display-letter-spacing);
+  line-height: var(--display-line-height);
 }
 
 h2 {
