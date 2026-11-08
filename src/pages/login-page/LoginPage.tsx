@@ -1,4 +1,5 @@
 import './LoginPage.css';
+import { Link } from 'react-router';
 
 function LoginPage() {
   return (
@@ -8,7 +9,7 @@ function LoginPage() {
           <h1>Welcome back</h1>
           <p>Log in to read what the club is saying</p>
         </header>
-        <div className='login__form'>
+        <form className='login__form'>
           <div className='login__input'>
             <label htmlFor='username'>Username</label>
             <input
@@ -32,10 +33,10 @@ function LoginPage() {
           </button>
           <div className='login__redirect'>
             <p>
-              No account? <a href='#'>Sign up</a>
+              No account? <Link to={'/signup'}>Sign up</Link>
             </p>
           </div>
-        </div>
+        </form>
       </div>
       <div className='login__hint'>
         <p>
