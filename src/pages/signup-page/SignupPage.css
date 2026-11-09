@@ -43,7 +43,7 @@
 .signup__form {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   gap: 15px;
 }
@@ -55,10 +55,14 @@
   gap: 15px;
 }
 
+.signup__form-group > .signup__input {
+  flex: 1 1 132px;
+}
+
 .signup__input {
   width: 100%;
   display: flex;
-  flex: 1 1 132px;
+  flex: 1;
   flex-direction: column;
   gap: 5px;
 }

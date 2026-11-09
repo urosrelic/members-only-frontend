@@ -22,10 +22,10 @@ function SignupPage() {
             </div>
 
             <div className='signup__input '>
-              <label htmlFor='firstName'>First name</label>
+              <label htmlFor='lastName'>First name</label>
               <input
                 type='text'
-                name='firstName'
+                name='lastName'
                 id='firstName'
                 placeholder='John'
               />
