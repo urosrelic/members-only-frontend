@@ -22,14 +22,23 @@ function SignupPage() {
             </div>
 
             <div className='signup__input '>
-              <label htmlFor='lastName'>First name</label>
+              <label htmlFor='lastName'>Last name</label>
               <input
                 type='text'
                 name='lastName'
-                id='firstName'
+                id='lastName'
                 placeholder='John'
               />
             </div>
+          </div>
+          <div className='signup__input'>
+            <label htmlFor='email'>Email</label>
+            <input
+              type='email'
+              name='email'
+              id='email'
+              placeholder='enter your email'
+            />
           </div>
           <div className='signup__input'>
             <label htmlFor='username'>Username</label>
